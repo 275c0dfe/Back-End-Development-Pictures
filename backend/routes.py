@@ -55,10 +55,9 @@ def get_picture_by_id(id):
     if id-1 < 0:
         return {"message": f"Picture id:{id} not found"}, 404
     entry = data[id-1]
-    
     if not entry:
         return {"message": "Internal server error"}, 500
-    return jsonify(entry)
+    return jsonify(entry) 
 
 
 ######################################################################
