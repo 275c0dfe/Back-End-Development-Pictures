@@ -65,6 +65,11 @@ def get_picture_by_id(id):
 ######################################################################
 @app.route("/picture", methods=["POST"])
 def create_picture():
+    body = request.json
+    pic_id = body["id"]
+    pic_url = body["pic_url"]
+    if(id < len(data)):
+        return jsonify({"Message":"pic exits"})
     pass
 
 ######################################################################
